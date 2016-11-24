@@ -8,10 +8,11 @@ using SObjectApplication.Repository.SObjectModel.Utils;
 using SObjectRepository.Repository.ChainCollection;
 using SObjectRepository.Repository.SObjectModel;
 using SObjectRepository.Repository.SObjectModel.Utils;
+using SObjectApplication.Repository.SObjectModel.Abstract;
 
 namespace SObjectApplication.Repository.SObjectModel
 {
-	public class Film : IEquatable<Film>
+	public class Film : IImageHandler, IEquatable<Film>
 	{
 		public ImageHelper Image { get; set; }
 		public Chain<Actor> Actors { get; set; }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,6 +20,13 @@ namespace SObjectApplication
 		static public Chain<Producer> Producers = new Chain<Producer>();	
 		public static void AddRecords()
 		{
+			Chain<int> testChain = new Chain<int>();
+			List<int> testList = testChain.ToList();
+			testList.ToList().Add(12);
+			testList.ToList().Add(23);
+			((Chain<int>) testChain).Add(12);
+
+			
 			
 			FilmStorage.Actors.Add(new Actor() { Name = "Actor1", Info = new InfoHuman() { ExpHistory = "ExpHistory of Actor1" } });
 			FilmStorage.Actors.Add(new Actor() { Name = "Actor2", Info = new InfoHuman() { ExpHistory = "ExpHistory of Actor2" } });

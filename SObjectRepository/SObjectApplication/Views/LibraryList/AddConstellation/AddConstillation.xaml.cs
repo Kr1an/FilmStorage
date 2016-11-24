@@ -16,6 +16,7 @@ using SObjectRepository.Repository.ChainCollection;
 
 using SObjectRepository.Repository.SObjectModel;
 using SObjectRepository.Repository.SObjectModel.Utils;
+using Microsoft.Win32;
 
 namespace SObjectApplication.Views.LibraryList.AddConstellation
 {
@@ -25,6 +26,7 @@ namespace SObjectApplication.Views.LibraryList.AddConstellation
 	public partial class AddConstillation : Window
 	{
 		public MainWindow rootElement;
+		public ImageHelper ImageHelper;
 		public AddConstillation()
 		{
 			InitializeComponent();
@@ -43,12 +45,26 @@ namespace SObjectApplication.Views.LibraryList.AddConstellation
 			if(!(name_text.Text == "" || name_text.Text.Length <= 1 ||
 				Convert.ToInt32(year_text.Text) < 1900 || Convert.ToInt32(year_text.Text) > DateTime.Now.Year-5))
 			{
-				FilmStorage.Producers.Add(new Producer() {Name = name_text.Text, Info = new InfoHuman() {BirthDate = new DateTime(Convert.ToInt32(year_text.Text), 1, 1)} });
+				Producer tmpProducer = new Producer() { Name = name_text.Text, Info = new InfoHuman() { BirthDate = new DateTime(Convert.ToInt32(year_text.Text), 1, 1) } };
+				if (this.ImageHelper != null)
+					tmpProducer.Image = this.ImageHelper;
+				FilmStorage.Producers.Add(tmpProducer);
 				rootElement.Content = new ListConstellation(rootElement).Content;
 			}
 			else
 			{
 
+			}
+		}
+		private void image_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+		{
+			OpenFileDialog openFileDialog = new OpenFileDialog();
+			openFileDialog.Filter = "Image Files(*.bmp, *.jpg) | *.bmp; *.jpg";
+			if (openFileDialog.ShowDialog() == true)
+			{
+				this.ImageHelper = new ImageHelper();
+				this.ImageHelper.ChangePicture(openFileDialog.FileName);
+				image.Source = this.ImageHelper.GetBitmapImage();
 			}
 		}
 	}

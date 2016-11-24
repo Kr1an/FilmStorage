@@ -16,6 +16,7 @@ using SObjectApplication.Repository.SObjectModel.Utils;
 using SObjectRepository.Repository.ChainCollection;
 using SObjectRepository.Repository.SObjectModel;
 using SObjectRepository.Repository.SObjectModel.Utils;
+using Microsoft.Win32;
 
 namespace SObjectApplication.Views.LibraryList.AddConstellation
 {
@@ -26,6 +27,7 @@ namespace SObjectApplication.Views.LibraryList.AddConstellation
 	{
 		private MainWindow rootElement;
 		private Film ParentStar;
+		public ImageHelper ImageHelper;
 
 		public AddPlanet()
 		{
@@ -61,6 +63,11 @@ namespace SObjectApplication.Views.LibraryList.AddConstellation
 			{
 				
 				Actor tmpActor = new Actor();
+				if (ImageHelper != null)
+				{
+					tmpActor.Image = this.ImageHelper;
+
+				}
 				tmpActor.Films.Add(ParentStar);
 				ParentStar.Actors.Add(tmpActor);
 				tmpActor.Name = name_text.Text;
@@ -71,6 +78,17 @@ namespace SObjectApplication.Views.LibraryList.AddConstellation
 			else
 			{
 
+			}
+		}
+		private void image_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+		{
+			OpenFileDialog openFileDialog = new OpenFileDialog();
+			openFileDialog.Filter = "Image Files(*.bmp, *.jpg) | *.bmp; *.jpg";
+			if (openFileDialog.ShowDialog() == true)
+			{
+				this.ImageHelper = new ImageHelper();
+				this.ImageHelper.ChangePicture(openFileDialog.FileName);
+				image.Source = this.ImageHelper.GetBitmapImage();
 			}
 		}
 	}

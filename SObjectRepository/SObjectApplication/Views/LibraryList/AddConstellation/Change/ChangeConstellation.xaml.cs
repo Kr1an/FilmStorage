@@ -16,6 +16,7 @@ using SObjectRepository.Repository.ChainCollection;
 
 using SObjectRepository.Repository.SObjectModel;
 using SObjectRepository.Repository.SObjectModel.Utils;
+using Microsoft.Win32;
 
 namespace SObjectApplication.Views.LibraryList.AddConstellation.Change
 {
@@ -41,6 +42,10 @@ namespace SObjectApplication.Views.LibraryList.AddConstellation.Change
 		}
 		private  void ComponentInit()
 		{
+			if (ChangeCond.Image.ByteArray != null)
+			{
+				image.Source = ChangeCond.Image.GetBitmapImage();
+			}
 			name_text.Text = ChangeCond.Name;
 
 			name_text.Text = ChangeCond.Name.ToString();
@@ -62,6 +67,16 @@ namespace SObjectApplication.Views.LibraryList.AddConstellation.Change
 			else
 			{
 
+			}
+		}
+		private void image_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+		{
+			OpenFileDialog openFileDialog = new OpenFileDialog();
+			openFileDialog.Filter = "Image Files(*.bmp, *.jpg) | *.bmp; *.jpg";
+			if (openFileDialog.ShowDialog() == true)
+			{
+				this.ChangeCond.Image.ChangePicture(openFileDialog.FileName);
+				image.Source = ChangeCond.Image.GetBitmapImage();
 			}
 		}
 	}

@@ -19,6 +19,7 @@ using SObjectRepository.Repository.SObjectModel.Utils;
 using SObjectApplication.Views.LibraryList;
 using SObjectApplication.Repository.SObjectModel;
 using SObjectApplication.Repository.SObjectModel.Utils;
+using Microsoft.Win32;
 
 namespace SObjectApplication.Views.LibraryList.AddConstellation
 {
@@ -29,6 +30,7 @@ namespace SObjectApplication.Views.LibraryList.AddConstellation
 	{
 		private MainWindow rootElement;
 		private Producer ParentConstellation;
+		public ImageHelper ImageHelper;
 		public AddStar()
 		{
 			InitializeComponent();
@@ -61,6 +63,10 @@ namespace SObjectApplication.Views.LibraryList.AddConstellation
 							ProductionDate = new DateTime(Convert.ToInt32(year_text.Text), 1, 1)
 						}
 				};
+				if(this.ImageHelper != null)
+				{
+					tmpFilm.Image = this.ImageHelper;
+				}
 				FilmStorage.Films.Add(tmpFilm);
 				ParentConstellation.Films.Add(tmpFilm);
 				rootElement.Content = new ListStar(rootElement, ParentConstellation).Content;
@@ -79,6 +85,18 @@ namespace SObjectApplication.Views.LibraryList.AddConstellation
 		{
 			if (GenreText != null)
 				GenreText.Text = Genres.GenreById((int)c_slider.Value);
+		}
+
+		private void image_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+		{
+			OpenFileDialog openFileDialog = new OpenFileDialog();
+			openFileDialog.Filter = "Image Files(*.bmp, *.jpg) | *.bmp; *.jpg";
+			if (openFileDialog.ShowDialog() == true)
+			{
+				this.ImageHelper = new ImageHelper();
+				this.ImageHelper.ChangePicture(openFileDialog.FileName);
+				image.Source = this.ImageHelper.GetBitmapImage();
+			}
 		}
 	}
 }

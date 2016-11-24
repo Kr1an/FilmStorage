@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:SObjectApplication.Views.LibraryList.AddConstellation.Change"
         mc:Ignorable="d"
         Title="ChangeStar" Height="350" Width="525">
-	<Grid Background="#FFD0EAF3">
+	<Grid Background="White">
 
 		<Grid.RowDefinitions>
 			<RowDefinition />
@@ -23,26 +23,24 @@
 			</Grid.ColumnDefinitions>
 			<Grid.Background>
 				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-					<GradientStop Color="#FFD7FFFE" Offset="0"/>
+					<GradientStop Color="#FFEDEDED" Offset="0"/>
 					<GradientStop Offset="0.298"/>
 				</LinearGradientBrush>
 			</Grid.Background>
 
-			<Grid.Effect>
-				<DropShadowEffect BlurRadius="40" Direction="90" Color="#FFBCDDFF" ShadowDepth="10"/>
-			</Grid.Effect>
-			<Border BorderBrush="#FF899185" BorderThickness="1" Height="51" Margin="10,10,0,10" VerticalAlignment="Center" Width="78" CornerRadius="15" Background="#0C00FF03" HorizontalAlignment="Left">
+
+			<Border BorderBrush="#FF899185" BorderThickness="1" Height="51" Margin="10,10,0,10" VerticalAlignment="Center" Width="78" CornerRadius="15" Background="#FFEDEDED" HorizontalAlignment="Left">
 				<Image x:Name="imgBack" Source="/SObjectApplication;component/resources/Drawable/back.png" MouseLeftButtonUp="imgBack_MouseUp"/>
 			</Border>
-			<Border BorderThickness="1" HorizontalAlignment="Right" Height="51" Margin="0,10,10.4,10" Width="78" CornerRadius="15" Background="#0C00FF03" Grid.Column="4" VerticalAlignment="Center" BorderBrush="#FF737373">
+			<Border BorderThickness="1" HorizontalAlignment="Right" Height="51" Margin="0,10,10.4,10" Width="78" CornerRadius="15" Background="#FFEDEDED" Grid.Column="4" VerticalAlignment="Center" BorderBrush="#FF899185">
 				<Image x:Name="imgNext" Source="/SObjectApplication;component/resources/Drawable/refresh.png" MouseLeftButtonDown="imgNext_MouseLeftButtonDown"/>
 			</Border>
 			<Grid Grid.Column="1" HorizontalAlignment="Left" Height="71" Margin="0.6,0,0,0" VerticalAlignment="Top" Width="315" Grid.ColumnSpan="4"/>
-			<Label x:Name="label" Content="CHANGE STAR" Margin="55,10,93.4,10" Grid.ColumnSpan="4" Width="266" Height="51" FontSize="32" FontFamily="Tahoma" HorizontalAlignment="Center" VerticalAlignment="Center" Background="{x:Null}" Foreground="#FFA7C0BC" Grid.Column="1"/>
+			<Label x:Name="label" Content="CHANGE FILM" Margin="55,10,93.4,10" Grid.ColumnSpan="4" Width="266" Height="51" FontSize="32" FontFamily="Tahoma" HorizontalAlignment="Center" VerticalAlignment="Center" Background="{x:Null}" Foreground="#FFB6B6B6" Grid.Column="1"/>
 
 		</Grid>
 		<Grid HorizontalAlignment="Left" Height="230" Margin="10,10,0,0" VerticalAlignment="Top" Width="498">
-			<Border BorderBrush="#FF000000" BorderThickness="0" CornerRadius="30" Background="#FFBCDDFF">
+			<Border BorderBrush="#FF000000" BorderThickness="0" CornerRadius="30" Background="#FFEDEDED">
 
 				<Grid Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Left" Height="210" Margin="10,10,0,0" VerticalAlignment="Top" Width="478">
 					<Grid.ColumnDefinitions>
@@ -56,7 +54,7 @@
 						<RowDefinition Height="1.5*"/>
 					</Grid.RowDefinitions>
 
-					<Border CornerRadius="30" BorderBrush="White" BorderThickness="1" HorizontalAlignment="Left" Height="54" Margin="113.8,-7,0,0" VerticalAlignment="Top" Width="195" Background="#33FAFAFA" Grid.Column="1">
+					<Border CornerRadius="30" BorderBrush="White" BorderThickness="1" HorizontalAlignment="Left" Height="54" Margin="113.8,-7,0,0" VerticalAlignment="Top" Width="195" Background="#33C8C8C8" Grid.Column="1">
 						<TextBox  x:Name="text1" Margin="-161,0,160.2,4.4" TextWrapping="Wrap" Text="NAME" FontFamily="Tahoma" FontSize="32" BorderThickness="0"  Background="{x:Null}" Foreground="#FF666666" BorderBrush="#FF779BA8" TextAlignment="Center" Height="39" VerticalAlignment="Bottom"/>
 					</Border>
 
@@ -84,8 +82,8 @@
 							</Border.RenderTransform>
 						</Border>
 						<Grid Grid.ColumnSpan="5" HorizontalAlignment="Left" Height="63" Margin="-33,23,0,-26" VerticalAlignment="Top" Width="204">
-							<Border  BorderBrush="#FF000000" BorderThickness="0" CornerRadius="30" Background="#FFBCDDFF">
-								<ListView ScrollViewer.VerticalScrollBarVisibility="Hidden" ScrollViewer.HorizontalScrollBarVisibility="Disabled" x:Name="listView" Margin="-133,-112,0,0" BorderBrush="{x:Null}" Background="#359DFF8E" FontFamily="Tahoma" HorizontalAlignment="Left" Width="131" RenderTransformOrigin="0.476,0.605" Height="158" VerticalAlignment="Top">
+							<Border  BorderBrush="#FF000000" BorderThickness="0" CornerRadius="30" Background="#FFEDEDED" Margin="0,0,0,-41">
+								<ListView ScrollViewer.VerticalScrollBarVisibility="Hidden" ScrollViewer.HorizontalScrollBarVisibility="Disabled" x:Name="listView" Margin="-116,25,0,-46.8" BorderBrush="{x:Null}" Background="#FFBCBCBC" FontFamily="Tahoma" HorizontalAlignment="Left" Width="129" RenderTransformOrigin="0.476,0.605" Height="85" VerticalAlignment="Top">
 									<ListView.ItemContainerStyle>
 										<Style TargetType="ListViewItem">
 											<EventSetter Event="MouseDoubleClick"  Handler="listViewItem_MouseDoubleClick" />
@@ -99,7 +97,7 @@
 												<Style TargetType="{x:Type GridViewColumnHeader}">
 													<!-- Set any properties you want to set -->
 
-													<Setter Property="Background" Value="LightBlue" />
+													<Setter Property="Background" Value="Azure" />
 													<Setter Property="Foreground" Value="gray" />
 													<Setter Property="FontWeight" Value="Bold" />
 													<Setter Property="Height" Value="30px"/>
@@ -117,13 +115,13 @@
 							</Border>
 						</Grid>
 					</Grid>
-					<Border CornerRadius="30" BorderBrush="White" BorderThickness="1" HorizontalAlignment="Left" Height="54" Margin="113.8,52,0,0" VerticalAlignment="Top" Width="195" Background="#33FAFAFA" Grid.RowSpan="3" Grid.Column="1">
+					<Border CornerRadius="30" BorderBrush="White" BorderThickness="1" HorizontalAlignment="Left" Height="54" Margin="113.8,52,0,0" VerticalAlignment="Top" Width="195" Background="#33C8C8C8" Grid.RowSpan="3" Grid.Column="1">
 						<TextBox  x:Name="year_text" Margin="33,0,0,3.6" TextWrapping="Wrap" Text="" FontFamily="Tahoma" FontSize="22" BorderThickness="0"  Background="{x:Null}" Foreground="Black" BorderBrush="#FF779BA8" TextAlignment="Center" Height="39" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="122" Grid.Column="1" Grid.Row="1" Grid.RowSpan="2"/>
 					</Border>
-					<Border CornerRadius="30" BorderBrush="White" BorderThickness="1" HorizontalAlignment="Left" Height="54" Margin="113.8,15.8,0,0" VerticalAlignment="Top" Width="154" Background="#33FAFAFA" Grid.RowSpan="2" Grid.Column="1" Grid.Row="2">
+					<Border CornerRadius="30" BorderBrush="White" BorderThickness="1" HorizontalAlignment="Left" Height="54" Margin="113.8,15.8,0,0" VerticalAlignment="Top" Width="154" Background="#33C8C8C8" Grid.RowSpan="2" Grid.Column="1" Grid.Row="2">
 						<TextBox  x:Name="genre_text" Margin="9,0,0,3.6" TextWrapping="Wrap" Text="" FontFamily="Tahoma" FontSize="22" BorderThickness="0"  Background="{x:Null}" Foreground="Black" BorderBrush="#FF779BA8" TextAlignment="Center" Height="39" VerticalAlignment="Bottom" Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" HorizontalAlignment="Left" Width="122"/>
 					</Border>
-					<Border CornerRadius="30" BorderBrush="White" BorderThickness="1" HorizontalAlignment="Left" Height="54" Margin="113.8,17.2,0,-14.4" VerticalAlignment="Top" Width="154" Background="#33FAFAFA" Grid.Column="1" Grid.Row="3">
+					<Border CornerRadius="30" BorderBrush="White" BorderThickness="1" HorizontalAlignment="Left" Height="54" Margin="113.8,17.2,0,-14.4" VerticalAlignment="Top" Width="154" Background="#33C8C8C8" Grid.Column="1" Grid.Row="3">
 						<TextBox  x:Name="producer_text" Margin="9,0,0,3.6" TextWrapping="Wrap" Text="" FontFamily="Tahoma" FontSize="22" BorderThickness="0"  Background="{x:Null}" Foreground="Black" BorderBrush="#FF779BA8" TextAlignment="Center" Height="39" VerticalAlignment="Bottom" Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" HorizontalAlignment="Left" Width="122"/>
 					</Border>
 
@@ -133,7 +131,7 @@
 			<TextBox  x:Name="const_text_Copy" Margin="169,0,223,62" TextWrapping="Wrap" Text="Genre" FontFamily="Tahoma" FontSize="25" BorderThickness="0"  Background="{x:Null}" Foreground="#FF666666" BorderBrush="#FF779BA8" TextAlignment="Center" Height="39" VerticalAlignment="Bottom"/>
 			<TextBox  x:Name="const_text_Copy1" Margin="169,0,223,1" TextWrapping="Wrap" Text="Producer" FontFamily="Tahoma" FontSize="25" BorderThickness="0"  Background="{x:Null}" Foreground="#FF666666" BorderBrush="#FF779BA8" TextAlignment="Center" Height="39" VerticalAlignment="Bottom"/>
 		</Grid>
-		<Slider x:Name="c_slider" Margin="481,134,-20.6,0" Foreground="#FF0C0C0C" Background="{x:Null}" BorderBrush="Black" RenderTransformOrigin="0,0" Maximum="4" Value="3" Cursor="Arrow" Height="18" VerticalAlignment="Top" HorizontalAlignment="Left" Width="58" ValueChanged="c_slider_ValueChanged">
+		<Slider x:Name="c_slider" Margin="482,133,-21.6,0" Foreground="#FF0C0C0C" Background="{x:Null}" BorderBrush="Black" RenderTransformOrigin="0,0" Maximum="4" Value="3" Cursor="Arrow" Height="18" VerticalAlignment="Top" HorizontalAlignment="Left" Width="58" ValueChanged="c_slider_ValueChanged">
 			<Slider.RenderTransform>
 				<TransformGroup>
 					<ScaleTransform/>
@@ -143,5 +141,9 @@
 				</TransformGroup>
 			</Slider.RenderTransform>
 		</Slider>
+		<Border Padding="11" CornerRadius="30" BorderBrush="White" BorderThickness="1" HorizontalAlignment="Left" Height="138" Margin="21,19,0,0" VerticalAlignment="Top" Width="146" Background="#33AEAEAE">
+			<Image x:Name="image" Source="/SObjectApplication;component/resources/Drawable/picture.png" MouseLeftButtonUp="image_MouseLeftButtonUp"/>
+
+		</Border>
 	</Grid>
 </Window>

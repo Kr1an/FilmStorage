@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:SObjectApplication.Views.LibraryList.AddConstellation"
         mc:Ignorable="d"
         Title="AddConstillation" Height="350" Width="525">
-	<Grid Background="#FFD0EAF3">
+	<Grid Background="White">
 
 		<Grid.RowDefinitions>
 			<RowDefinition />
@@ -23,26 +23,23 @@
 			</Grid.ColumnDefinitions>
 			<Grid.Background>
 				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-					<GradientStop Color="#FFD7FFFE" Offset="0"/>
+					<GradientStop Color="#FFEDEDED" Offset="0"/>
 					<GradientStop Offset="0.298"/>
 				</LinearGradientBrush>
 			</Grid.Background>
 
-			<Grid.Effect>
-				<DropShadowEffect BlurRadius="40" Direction="90" Color="#FFBCDDFF" ShadowDepth="10"/>
-			</Grid.Effect>
-			<Border BorderBrush="#FF899185" BorderThickness="1" Height="51" Margin="10,10,0,10" VerticalAlignment="Center" Width="78" CornerRadius="15" Background="#0C00FF03" HorizontalAlignment="Left">
+			<Border BorderBrush="#FF899185" BorderThickness="1" Height="51" Margin="10,10,0,10" VerticalAlignment="Center" Width="78" CornerRadius="15" Background="#FFEDEDED" HorizontalAlignment="Left">
 				<Image x:Name="imgBack" Source="/SObjectApplication;component/resources/Drawable/back.png" MouseLeftButtonUp="imgBack_MouseUp"/>
 			</Border>
-			<Border BorderThickness="1" HorizontalAlignment="Right" Height="51" Margin="0,10,10.4,10" Width="78" CornerRadius="15" Background="#0C00FF03" Grid.Column="4" VerticalAlignment="Center">
+			<Border BorderBrush="#FF899185" BorderThickness="1" HorizontalAlignment="Right" Height="51" Margin="0,10,10.4,10" Width="78" CornerRadius="15" Background="#FFEDEDED" Grid.Column="4" VerticalAlignment="Center">
 				<Image x:Name="imgNext" Source="/SObjectApplication;component/resources/Drawable/add.png" MouseLeftButtonDown="imgNext_MouseLeftButtonDown"/>
 			</Border>
 			<Grid Grid.Column="1" HorizontalAlignment="Left" Height="71" Margin="0.6,0,0,0" VerticalAlignment="Top" Width="315" Grid.ColumnSpan="4"/>
-			<Label x:Name="label" Content="PRODUCER ADDING" Margin="9.8,10,82.4,10" Grid.ColumnSpan="4" Width="323" Height="51" FontSize="32" FontFamily="Tahoma" HorizontalAlignment="Center" VerticalAlignment="Center" Background="{x:Null}" Foreground="#FFA7C0BC" Grid.Column="1"/>
+			<Label x:Name="label" Content="PRODUCER ADDING" Margin="9.8,10,82.4,10" Grid.ColumnSpan="4" Width="323" Height="51" FontSize="32" FontFamily="Tahoma" HorizontalAlignment="Center" VerticalAlignment="Center" Background="{x:Null}" Foreground="#FFBFBFBF" Grid.Column="1"/>
 
 		</Grid>
 		<Grid HorizontalAlignment="Left" Height="230" Margin="10,10,0,0" VerticalAlignment="Top" Width="498">
-			<Border BorderBrush="#FF000000" BorderThickness="0" CornerRadius="30" Background="#FFBCDDFF">
+			<Border BorderBrush="#FF000000" BorderThickness="0" CornerRadius="30" Background="#FFEDEDED">
 
 				<Grid Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Left" Height="210" Margin="10,10,0,0" VerticalAlignment="Top" Width="478">
 					<Grid.ColumnDefinitions>
@@ -56,8 +53,8 @@
 						<RowDefinition Height="1.5*"/>
 					</Grid.RowDefinitions>
 
-					<Border CornerRadius="30" BorderBrush="White" BorderThickness="1" HorizontalAlignment="Left" Height="54" Margin="75.8,10,0,0" VerticalAlignment="Top" Width="195" Background="#33FAFAFA" Grid.RowSpan="2" Grid.Column="1">
-						<TextBox  x:Name="name_text" Margin="-1,0,0.8,7.6" TextWrapping="Wrap" Text="" FontFamily="Tahoma" FontSize="32" BorderThickness="0"  Background="{x:Null}" Foreground="#FF666666" BorderBrush="#FF779BA8" TextAlignment="Center" Height="39" VerticalAlignment="Bottom"/>
+					<Border CornerRadius="30" BorderBrush="White" BorderThickness="1" HorizontalAlignment="Left" Height="54" Margin="126.8,20.2,0,0" VerticalAlignment="Top" Width="192" Background="#33C8C8C8" Grid.RowSpan="2" Grid.Column="1" Grid.Row="1">
+						<TextBox  x:Name="name_text" Margin="9.2,0,0.8,7.6" TextWrapping="Wrap" Text="" FontFamily="Tahoma" FontSize="32" BorderThickness="0"  Background="{x:Null}" Foreground="#FF666666" BorderBrush="#FF779BA8" TextAlignment="Center" Height="39" VerticalAlignment="Bottom"/>
 					</Border>
 					<Grid HorizontalAlignment="Left" Height="60" Margin="159,36.2,0,0" Grid.Row="1" VerticalAlignment="Top" Width="319" Grid.RowSpan="3" Grid.ColumnSpan="2">
 						<Grid.ColumnDefinitions>
@@ -69,15 +66,19 @@
 							<ColumnDefinition Width="49*"/>
 							<ColumnDefinition Width="48*"/>
 						</Grid.ColumnDefinitions>
-						<Label x:Name="label_Copy2" Content="Birth Year:" FontFamily="Tahoma" FontSize="36" Foreground="#FFA7C0BC" Height="58" VerticalAlignment="Center" HorizontalAlignment="Center" Width="199" Margin="-156,-13,9.8,15" Grid.Column="0" Grid.ColumnSpan="2"/>
-						<Border CornerRadius="5" BorderBrush="White" BorderThickness="1" Grid.Column="2" HorizontalAlignment="Left" Height="59" VerticalAlignment="Top" Width="213" Background="#33FAFAFA" Margin="22.2,-16,0,0" Grid.ColumnSpan="5">
-							<TextBox  x:Name="year_text" Margin="-1,0,0.8,7.6" TextWrapping="Wrap" Text="" FontFamily="Tahoma" FontSize="32" BorderThickness="0"  Background="{x:Null}" Foreground="#FF666666" BorderBrush="#FF779BA8" TextAlignment="Center" Height="39" VerticalAlignment="Bottom"/>
+						<Label x:Name="label_Copy2" Content="Birth Year:" FontFamily="Tahoma" FontSize="36" Foreground="#FF666666" Height="58" VerticalAlignment="Center" HorizontalAlignment="Center" Width="199" Margin="-51,51,10.4,-49" Grid.Column="0" Grid.ColumnSpan="4"/>
+						<Border CornerRadius="5" BorderBrush="White" BorderThickness="1" Grid.Column="3" HorizontalAlignment="Left" Height="59" VerticalAlignment="Top" Width="192" Background="#33C8C8C8" Margin="21.4,50,0,-49" Grid.ColumnSpan="4">
+							<TextBox  x:Name="year_text" Margin="9.2,0,0.6,7.4" TextWrapping="Wrap" Text="" FontFamily="Tahoma" FontSize="32" BorderThickness="0"  Background="{x:Null}" Foreground="#FF666666" BorderBrush="#FF779BA8" TextAlignment="Center" Height="39" VerticalAlignment="Bottom"/>
 						</Border>
-						<Label x:Name="label_Copy1" Content="Name:" FontFamily="Tahoma" FontSize="36" Foreground="#FFA7C0BC" HorizontalAlignment="Right" Width="111" Margin="-156,-91,45,0" Grid.Column="0" Height="58" VerticalAlignment="Top"/>
+						<Label x:Name="label_Copy1" Content="Name:" FontFamily="Tahoma" FontSize="36" Foreground="#FF666666" HorizontalAlignment="Right" Width="111" Margin="0,-22,37.4,0" Grid.Column="0" Height="58" VerticalAlignment="Top" Grid.ColumnSpan="4"/>
 					</Grid>
 
 				</Grid>
 			</Border>
 		</Grid>
+		<Border Padding="11" CornerRadius="30" BorderBrush="White" BorderThickness="1" HorizontalAlignment="Left" Height="136" Margin="19,19,0,0" VerticalAlignment="Top" Width="152" Background="#33AEAEAE" Panel.ZIndex="10">
+			<Image x:Name="image" Source="/SObjectApplication;component/resources/Drawable/picture.png" MouseLeftButtonUp="image_MouseLeftButtonUp"/>
+
+		</Border>
 	</Grid>
 </Window>

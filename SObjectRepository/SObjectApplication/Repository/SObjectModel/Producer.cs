@@ -7,10 +7,11 @@ using SObjectApplication.Repository.SObjectModel;
 using SObjectApplication.Repository.SObjectModel.Utils;
 using SObjectRepository.Repository.ChainCollection;
 using SObjectRepository.Repository.SObjectModel.Utils;
+using SObjectApplication.Repository.SObjectModel.Abstract;
 
 namespace SObjectRepository.Repository.SObjectModel
 {
-	public class Producer : IEquatable<Producer>
+	public class Producer : IImageHandler, IEquatable<Producer>
 	{
 		public ImageHelper Image { get; set; }
 		public Chain<Film> Films { get; set; }

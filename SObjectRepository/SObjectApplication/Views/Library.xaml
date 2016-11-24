@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:SObjectApplication"
         mc:Ignorable="d"
         Title="Library" Height="350" Width="525">
-	<Grid Background="#FFF6F6F6">
+	<Grid Background="White">
 		<Grid.RowDefinitions>
 			<RowDefinition />
 			<RowDefinition Height="71.2"/>
@@ -61,20 +61,19 @@
 				<ColumnDefinition Width="98*"/>
 			</Grid.ColumnDefinitions>
 			<Grid.Background>
-				<ImageBrush/>
+				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+					<GradientStop Color="#FFEDEDED" Offset="0"/>
+					<GradientStop Offset="0.298"/>
+				</LinearGradientBrush>
 			</Grid.Background>
-
-			<Grid.Effect>
-				<DropShadowEffect BlurRadius="40" Direction="90" Color="#FFBCDDFF" ShadowDepth="10"/>
-			</Grid.Effect>
-			<Border BorderBrush="#FF899185" BorderThickness="1" Height="51" Margin="10,10,0,10" VerticalAlignment="Center" Width="78" CornerRadius="15" Background="#0C00FF03" HorizontalAlignment="Left">
+			<Border BorderBrush="#FF899185" BorderThickness="1" Height="51" Margin="10,10,0,10" VerticalAlignment="Center" Width="78" CornerRadius="15" Background="#FFEDEDED" HorizontalAlignment="Left">
 				<Image x:Name="imgBack" Source="/SObjectApplication;component/resources/Drawable/back.png" MouseLeftButtonUp="imgBack_MouseUp"/>
 			</Border>
 			<Border BorderBrush="#FF899185" BorderThickness="1" HorizontalAlignment="Right" Height="51" Margin="0,10,10.4,10" Width="78" CornerRadius="15" Background="#0C00FF03" Grid.Column="2" VerticalAlignment="Center" Visibility="Hidden">
 				<Image x:Name="imgNext" Source="/SObjectApplication;component/resources/Drawable/next.png" MouseLeftButtonUp="imgBack_MouseUp"/>
 			</Border>
 			<TextBox x:Name="textBox" Grid.Column="1" HorizontalAlignment="Center" Height="51" Margin="10.4,20,9.8,10" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="295" FontFamily="Tahoma" FontSize="36" Foreground="#FF8B8B8B" SelectionBrush="{x:Null}" Background="{x:Null}" BorderBrush="{x:Null}" IsReadOnly="True" TextAlignment="Center" Visibility="Hidden"/>
-			<Border CornerRadius="5" BorderBrush="#FFB7B7B7">
+			<Border  CornerRadius="5" BorderBrush="#FFB7B7B7">
 				<Label x:Name="label" Content="LIBRARY" HorizontalAlignment="Left" Margin="188,13,-324.4,0" VerticalAlignment="Top" Height="49" Width="238" Grid.ColumnSpan="2" Foreground="#FF151515" Background="{x:Null}" Grid.Column="1" FontSize="32" FontFamily="Tahoma"/>
 			</Border>
 

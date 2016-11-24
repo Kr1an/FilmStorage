@@ -17,6 +17,7 @@ using SObjectRepository.Repository.ChainCollection;
 
 using SObjectRepository.Repository.SObjectModel;
 using SObjectRepository.Repository.SObjectModel.Utils;
+using Microsoft.Win32;
 
 namespace SObjectApplication.Views.LibraryList.AddConstellation.Change
 {
@@ -45,13 +46,17 @@ namespace SObjectApplication.Views.LibraryList.AddConstellation.Change
 		}
 		private void ComponentInit()
 		{
+			if (ChangeCond.Image.ByteArray != null)
+			{
+				image.Source = ChangeCond.Image.GetBitmapImage();
+			}
 			name_text.Text = ChangeCond.Name;
 			year_text.Text = ChangeCond.Info.BirthDate.Year.ToString();
 		}
 
 		private void imgBack_MouseUp(object sender, MouseButtonEventArgs e)
 		{
-			rootElement.Content = new ListStar(rootElement, ParentConstellation).Content;
+			rootElement.Content = new ListPlanet(rootElement, ParentStar).Content;
 		}
 		private void imgNext_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
 		{
@@ -65,6 +70,16 @@ namespace SObjectApplication.Views.LibraryList.AddConstellation.Change
 			else
 			{
 
+			}
+		}
+		private void image_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+		{
+			OpenFileDialog openFileDialog = new OpenFileDialog();
+			openFileDialog.Filter = "Image Files(*.bmp, *.jpg) | *.bmp; *.jpg";
+			if (openFileDialog.ShowDialog() == true)
+			{
+				this.ChangeCond.Image.ChangePicture(openFileDialog.FileName);
+				image.Source = ChangeCond.Image.GetBitmapImage();
 			}
 		}
 	}

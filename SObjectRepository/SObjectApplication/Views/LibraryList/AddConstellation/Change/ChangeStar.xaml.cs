@@ -17,6 +17,7 @@ using SObjectRepository.Repository.ChainCollection;
 
 using SObjectRepository.Repository.SObjectModel;
 using SObjectRepository.Repository.SObjectModel.Utils;
+using Microsoft.Win32;
 
 namespace SObjectApplication.Views.LibraryList.AddConstellation.Change
 {
@@ -45,11 +46,15 @@ namespace SObjectApplication.Views.LibraryList.AddConstellation.Change
 		{
 			ListViewItem item = sender as ListViewItem;
 			object obj = item.Content;
-			const_text.Text = ((Producer)obj).Name;
+			producer_text.Text = ((Producer)obj).Name;
 		}
 
 		private void ComponentInit()
 		{
+			if(ChangeCond.Image.ByteArray != null)
+			{
+				image.Source = ChangeCond.Image.GetBitmapImage();
+			}
 			year_text.Text = ChangeCond.Info.ProductionDate.Year.ToString();
 			listView.ItemsSource = FilmStorage.Producers.items;
 			name_text.Text = ChangeCond.Name;
@@ -91,27 +96,21 @@ namespace SObjectApplication.Views.LibraryList.AddConstellation.Change
 
 		private void c_slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
 		{
-			String tmp = "";
-			switch ((int)c_slider.Value)
-			{
-				case 0: tmp = "O Spector"; break;
-				case 1: tmp = "B Spector"; break;
-				case 2: tmp = "A Spector"; break;
-				case 3: tmp = "F Spector"; break;
-				case 4: tmp = "G Spector"; break;
-				case 5: tmp = "K Spector"; break;
-				case 6: tmp = "W Spector"; break;
-				case 7: tmp = "L Spector"; break;
-				case 8: tmp = "T Spector"; break;
-				case 9: tmp = "Y Spector"; break;
-				case 10: tmp = "C Spector"; break;
-				case 11: tmp = "S Spector"; break;
-				case 12: tmp = "D Spector"; break;
-				case 13: tmp = "Q Spector"; break;
-				case 14: tmp = "P Spector"; break;
-			}
-			spec_class.Content = tmp;
+			
 
+			genre_text.Text = Genres.GenreById((int)c_slider.Value);
+
+		}
+
+		private void image_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+		{
+			OpenFileDialog openFileDialog = new OpenFileDialog();
+			openFileDialog.Filter = "Image Files(*.bmp, *.jpg) | *.bmp; *.jpg";
+			if (openFileDialog.ShowDialog() == true)
+			{
+				this.ChangeCond.Image.ChangePicture(openFileDialog.FileName);
+				image.Source = ChangeCond.Image.GetBitmapImage();
+			}
 		}
 	}
 }

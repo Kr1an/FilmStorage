@@ -57,16 +57,14 @@
     </ApplicationDefinition>
     <Compile Include="FilmStorage.cs" />
     <Compile Include="Repository\ChainCollection\Chain.cs" />
+    <Compile Include="Repository\SObjectModel\Abstract\ImageHandler.cs" />
     <Compile Include="Repository\SObjectModel\Actor.cs" />
     <Compile Include="Repository\SObjectModel\Film.cs" />
     <Compile Include="Repository\SObjectModel\Utils\ImageHelper.cs" />
     <Compile Include="Repository\SObjectModel\Utils\InfoFilm.cs" />
     <Compile Include="Repository\SObjectModel\Utils\InfoHelper.cs" />
     <Compile Include="Repository\SObjectModel\Utils\InfoHuman.cs" />
-    <Compile Include="Repository\SObjectModel\Utils\PlanetFeature.cs" />
-    <Compile Include="Repository\SObjectModel\Utils\Position.cs" />
     <Compile Include="Repository\SObjectModel\Producer.cs" />
-    <Compile Include="Repository\SObjectModel\Utils\StarFeature.cs" />
     <Compile Include="Views\LibraryList\AddConstellation\AddConstillation.xaml.cs">
       <DependentUpon>AddConstillation.xaml</DependentUpon>
     </Compile>
@@ -235,6 +233,15 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="resources\Drawable\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\Drawable\picture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\Drawable\books.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\Drawable\logout.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

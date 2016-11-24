@@ -7,10 +7,11 @@ using SObjectApplication.Repository.SObjectModel;
 using SObjectApplication.Repository.SObjectModel.Utils;
 using SObjectRepository.Repository.ChainCollection;
 using SObjectRepository.Repository.SObjectModel.Utils;
+using SObjectApplication.Repository.SObjectModel.Abstract;
 
 namespace SObjectRepository.Repository.SObjectModel
 {
-	public class Actor : IEquatable<Actor>
+	public class Actor : IImageHandler, IEquatable<Actor> 
 	{
 		public ImageHelper Image { get; set; }
 		public InfoHuman Info { get; set; }
