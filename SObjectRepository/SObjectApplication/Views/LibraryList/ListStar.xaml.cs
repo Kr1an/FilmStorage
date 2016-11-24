@@ -40,13 +40,14 @@ namespace SObjectApplication.Views.LibraryList
 			listView.ItemsSource = FilmStorage.Films.items.Where(x => (x.Producer == this.ParentConstellation || this.ParentConstellation == null));
 			if(ParentConstellation == null)
 			{
-				buttonLayout.Effect = new System.Windows.Media.Effects.BlurEffect();
-				btn_info.Effect = new System.Windows.Media.Effects.BlurEffect();
-				btn_add.Effect = new System.Windows.Media.Effects.BlurEffect();
-				btn_delete.Effect = new System.Windows.Media.Effects.BlurEffect();
-				btn_delete.IsEnabled = false;
+				//buttonLayout.Effect = new System.Windows.Media.Effects.BlurEffect();
+				//btn_info.Effect = new System.Windows.Media.Effects.BlurEffect();
+				//btn_add.Effect = new System.Windows.Media.Effects.BlurEffect();
+				//btn_delete.Effect = new System.Windows.Media.Effects.BlurEffect();
+				//btn_delete.IsEnabled = false;
+				//btn_info.IsEnabled = false;
 				btn_add.IsEnabled = false;
-				btn_info.IsEnabled = false;
+				btn_add.Visibility = Visibility.Hidden;
 			}
 
 		}
@@ -83,6 +84,12 @@ namespace SObjectApplication.Views.LibraryList
 				ListViewItem item = sender as ListViewItem;
 				object obj = item.Content;
 				rootElement.Content = new ListPlanet(rootElement, ((Film)obj)).Content;
+			}else
+			{
+				ListViewItem item = sender as ListViewItem;
+				object obj = item.Content;
+				rootElement.Content = new ListPlanet(rootElement, ((Film)obj), IsFromFullList:true).Content;
+
 			}
 		}
 
@@ -103,7 +110,10 @@ namespace SObjectApplication.Views.LibraryList
 					ParentConstellation.Films.Delete(Selected);
 				
 				FilmStorage.Films.Delete(Selected);
-				listView.ItemsSource = ParentConstellation.Films.items;
+				if (ParentConstellation == null)
+					listView.ItemsSource = FilmStorage.Films;
+				else
+					listView.ItemsSource = ParentConstellation.Films.items;
 			}
 		}
 		void GridViewColumnHeaderClickedHandler(object sender, RoutedEventArgs e)

@@ -92,10 +92,6 @@
     <Compile Include="Views\LibraryList\ListStar.xaml.cs">
       <DependentUpon>ListStar.xaml</DependentUpon>
     </Compile>
-    <Page Include="Views\Add.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Views\Library.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -104,9 +100,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Views\Add.xaml.cs">
-      <DependentUpon>Add.xaml</DependentUpon>
-    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -183,48 +176,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="resources\Drawable\bookshelf.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="resources\Drawable\plus.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="resources\Drawable\next.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="resources\Drawable\planet-earth.png" />
-    <Resource Include="resources\Drawable\star %281%29.png" />
-    <Resource Include="resources\Drawable\ursa-major.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="resources\Drawable\information.png" />
     <Resource Include="resources\Drawable\add.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="resources\Drawable\cancel.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="resources\Drawable\back.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="resources\Drawable\galaxy.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="resources\Drawable\planet-earth %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="resources\Drawable\saturn.png" />
-    <Resource Include="resources\Drawable\venus.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="resources\Drawable\refresh.png" />
-    <Resource Include="resources\Drawable\trash.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="resources\Drawable\door %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="resources\Drawable\exit.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="resources\Drawable\actor.png" />
@@ -242,6 +200,15 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="resources\Drawable\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\Drawable\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\Drawable\information.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\Drawable\cancel.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

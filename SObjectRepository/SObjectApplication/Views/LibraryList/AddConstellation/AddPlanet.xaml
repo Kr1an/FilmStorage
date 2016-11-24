@@ -27,10 +27,10 @@
 					<GradientStop Offset="0.298"/>
 				</LinearGradientBrush>
 			</Grid.Background>
-			<Border BorderBrush="#FF899185" BorderThickness="1" Height="51" Margin="10,10,0,10" VerticalAlignment="Center" Width="78" CornerRadius="15" Background="#FFEDEDED" HorizontalAlignment="Left">
+			<Border  BorderThickness="1" Height="51" Margin="10,10,0,10" VerticalAlignment="Center" Width="78" CornerRadius="15" HorizontalAlignment="Left">
 				<Image x:Name="imgBack" Source="/SObjectApplication;component/resources/Drawable/back.png" MouseLeftButtonUp="imgBack_MouseUp"/>
 			</Border>
-			<Border BorderBrush="#FF899185" BorderThickness="1" HorizontalAlignment="Right" Height="51" Margin="0,10,10.4,10" Width="78" CornerRadius="15" Background="#FFEDEDED" Grid.Column="4" VerticalAlignment="Center">
+			<Border BorderThickness="1" HorizontalAlignment="Right" Height="51" Margin="0,10,10.4,10" Width="78" CornerRadius="15" Grid.Column="4" VerticalAlignment="Center">
 				<Image x:Name="imgNext" Source="/SObjectApplication;component/resources/Drawable/add.png" MouseLeftButtonDown="imgNext_MouseLeftButtonDown"/>
 			</Border>
 

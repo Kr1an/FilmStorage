@@ -29,7 +29,7 @@
 			</Grid.Background>
 
 
-			<Border BorderBrush="#FF899185" BorderThickness="1" Height="51" Margin="10,10,0,10" VerticalAlignment="Center" Width="78" CornerRadius="15" Background="#FFEDEDED" HorizontalAlignment="Left">
+			<Border  BorderThickness="1" Height="51" Margin="10,10,0,10" VerticalAlignment="Center" Width="78" CornerRadius="15"  HorizontalAlignment="Left">
 				<Image x:Name="imgBack" Source="/SObjectApplication;component/resources/Drawable/back.png" MouseLeftButtonUp="imgBack_MouseUp"/>
 			</Border>
 			<Border BorderBrush="#FF899185" BorderThickness="1" HorizontalAlignment="Right" Height="51" Margin="0,10,10.4,10" Width="78" CornerRadius="15" Background="#0C00FF03" Grid.Column="4" VerticalAlignment="Center" Visibility="Hidden">

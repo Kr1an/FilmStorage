@@ -27,13 +27,15 @@ namespace SObjectApplication.Views.LibraryList
 	/// </summary>
 	public partial class ListPlanet : Window
 	{
+		private bool IsFromFullList;
 		private MainWindow rootElement;
 		private Film ParentStar;
 		GridViewColumnHeader _lastHeaderClicked = null;
 		ListSortDirection _lastDirection = ListSortDirection.Ascending;
 
-		public ListPlanet(MainWindow rootElement, Film ParentStar = null)
+		public ListPlanet(MainWindow rootElement, Film ParentStar = null, bool IsFromFullList = false)
 		{
+			this.IsFromFullList = IsFromFullList;
 			this.rootElement = rootElement;
 			this.ParentStar = ParentStar;
 
@@ -41,18 +43,23 @@ namespace SObjectApplication.Views.LibraryList
 			listView.ItemsSource = FilmStorage.Actors.items.Where(x => (x.Films.IsIncluded(ParentStar) || this.ParentStar == null));
 			if (ParentStar == null)
 			{
-				buttonLayout.Effect = new System.Windows.Media.Effects.BlurEffect();
-				btn_info.Effect = new System.Windows.Media.Effects.BlurEffect();
-				btn_add.Effect = new System.Windows.Media.Effects.BlurEffect();
-				btn_delete.Effect = new System.Windows.Media.Effects.BlurEffect();
-				btn_delete.IsEnabled = false;
+				//buttonLayout.Effect = new System.Windows.Media.Effects.BlurEffect();
+				//btn_info.Effect = new System.Windows.Media.Effects.BlurEffect();
+				//btn_add.Effect = new System.Windows.Media.Effects.BlurEffect();
+				//btn_delete.Effect = new System.Windows.Media.Effects.BlurEffect();
+				//btn_delete.IsEnabled = false;
+				//btn_add.IsEnabled = false;
+				//btn_info.IsEnabled = false;
 				btn_add.IsEnabled = false;
-				btn_info.IsEnabled = false;
+				btn_add.Visibility = Visibility.Hidden;
 			}
 		}
 		private void imgBack_MouseUp(object sender, MouseButtonEventArgs e)
 		{
-			if (ParentStar == null)
+			if (IsFromFullList)
+			{
+				rootElement.Content = new ListStar(rootElement).Content;
+			}else if (ParentStar == null)
 				BackToMainWindow();
 			else
 				BackToListStar();
@@ -98,7 +105,10 @@ namespace SObjectApplication.Views.LibraryList
 					Selected.Films[i].Actors.DeleteAt(Selected.Films[i].Actors.IndexOf(Selected));
 				FilmStorage.Actors.DeleteAt(FilmStorage.Actors.IndexOf(Selected));
 			}
-			listView.ItemsSource = FilmStorage.Actors.items.Where(x => (x.Films.IsIncluded(ParentStar)));
+			if(ParentStar == null)
+				listView.ItemsSource = FilmStorage.Actors.items;
+			else
+				listView.ItemsSource = FilmStorage.Actors.items.Where(x => (x.Films.IsIncluded(ParentStar)));
 		}
 		void GridViewColumnHeaderClickedHandler(object sender, RoutedEventArgs e)
 		{

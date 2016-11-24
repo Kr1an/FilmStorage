@@ -46,7 +46,7 @@ namespace SObjectApplication
 		}
 		private void btnAdd_MouseUp(object sender, MouseButtonEventArgs e)
 		{
-			rootElement.Content = new Add(rootElement).Content;
+			
 		}
 
 		private void name_text_TextChanged(object sender, TextChangedEventArgs e)
