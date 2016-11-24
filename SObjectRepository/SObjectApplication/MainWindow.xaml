@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SObjectApplication"
+		ResizeMode="NoResize"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
 	<Grid x:Name="MainGrid" RenderTransformOrigin="0.497,0.497" Background="White">
@@ -26,10 +27,5 @@
 
 			</Grid>
 		</Border>
-		<Grid Grid.Column="1" HorizontalAlignment="Left" Height="140" Margin="9.8,10,0,0" VerticalAlignment="Top" Width="239">
-			<Border Grid.Column="1" BorderBrush="#FF000000" BorderThickness="0" CornerRadius="40" Background="#FFBCDDFF" Visibility="Hidden">
-				<Image x:Name="btnAdd" Height="100" Margin="0" Width="122" Source="resources/Drawable/plus.png" MouseLeftButtonUp="btnAdd_MouseUp"/>
-			</Border>
-		</Grid>
 	</Grid>
 </Window>

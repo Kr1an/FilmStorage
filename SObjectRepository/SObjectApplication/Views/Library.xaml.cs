@@ -40,15 +40,15 @@ namespace SObjectApplication
 
 		private void btnListCon_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
 		{
-			rootElement.Content = new ListConstellation(rootElement).Content;
+			rootElement.Content = new ListProducer(rootElement).Content;
 		}
-		private void btnListStar_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+		private void btnListFilm_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
 		{
-			rootElement.Content = new ListStar(rootElement).Content;
+			rootElement.Content = new ListFilm(rootElement).Content;
 		}
-		private void btnListPlanet_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+		private void btnListActor_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
 		{
-			rootElement.Content = new ListPlanet(rootElement).Content;
+			rootElement.Content = new ListActor(rootElement).Content;
 		}
 	}
 }

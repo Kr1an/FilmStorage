@@ -10,6 +10,8 @@
 //------------------------------------------------------------------------------
 
 using SObjectApplication.Views.LibraryList;
+using SObjectApplication.Views.LibraryList.AddConstellation;
+using SObjectApplication.Views.LibraryList.AddConstellation.Change;
 using System;
 using System.Diagnostics;
 using System.Windows;

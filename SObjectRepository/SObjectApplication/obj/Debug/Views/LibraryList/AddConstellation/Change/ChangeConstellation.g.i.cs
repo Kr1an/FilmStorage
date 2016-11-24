@@ -9,7 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using SObjectApplication.Views.LibraryList.AddConstellation.Change;
+using SObjectApplication.Views.LibraryList.AddProducer.Change;
 using System;
 using System.Diagnostics;
 using System.Windows;
@@ -32,13 +32,13 @@ using System.Windows.Shapes;
 using System.Windows.Shell;
 
 
-namespace SObjectApplication.Views.LibraryList.AddConstellation.Change {
+namespace SObjectApplication.Views.LibraryList.AddProducer.Change {
     
     
     /// <summary>
-    /// ChangeConstellation
+    /// ChangeProducer
     /// </summary>
-    public partial class ChangeConstellation : System.Windows.Window, System.Windows.Markup.IComponentConnector {
+    public partial class ChangeProducer : System.Windows.Window, System.Windows.Markup.IComponentConnector {
         
         
         #line 33 "..\..\..\..\..\..\Views\LibraryList\AddConstellation\Change\ChangeConstellation.xaml"

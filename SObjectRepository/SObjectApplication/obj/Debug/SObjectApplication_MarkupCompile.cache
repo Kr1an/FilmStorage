@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Kr1an_000\Desktop\FilmStorage\SObjectRepository\SObjectApplication\App.xaml
-11-177865484
+1170781207
 
-25-1161809571
+25419899616
 131569487696
-Views\Library.xaml;MainWindow.xaml;Views\LibraryList\AddConstellation\AddConstillation.xaml;Views\LibraryList\AddConstellation\AddPlanet.xaml;Views\LibraryList\AddConstellation\AddStar.xaml;Views\LibraryList\AddConstellation\Change\ChangeConstellation.xaml;Views\LibraryList\AddConstellation\Change\ChangePlanet.xaml;Views\LibraryList\AddConstellation\Change\ChangeStar.xaml;Views\LibraryList\ListConstellation.xaml;Views\LibraryList\ListPlanet.xaml;Views\LibraryList\ListStar.xaml;
+Views\Library.xaml;MainWindow.xaml;Views\LibraryList\AddConstellation\AddProducer.xaml;Views\LibraryList\AddConstellation\AddActor.xaml;Views\LibraryList\AddConstellation\AddFilm.xaml;Views\LibraryList\AddConstellation\Change\ChangeProducer.xaml;Views\LibraryList\AddConstellation\Change\ChangeActor.xaml;Views\LibraryList\AddConstellation\Change\ChangeFilm.xaml;Views\LibraryList\ListProducer.xaml;Views\LibraryList\ListActor.xaml;Views\LibraryList\ListFilm.xaml;
 
 False
 

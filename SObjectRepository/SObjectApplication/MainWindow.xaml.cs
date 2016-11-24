@@ -57,7 +57,8 @@ namespace SObjectApplication
 		private void btn_Exit_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
 		{
 			
-			rootElement.Close();
+			Application.Current.Shutdown();
+			
 		}
 	}
 }

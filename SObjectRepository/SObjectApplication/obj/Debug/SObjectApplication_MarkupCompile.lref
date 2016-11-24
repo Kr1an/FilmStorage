@@ -2,13 +2,13 @@
 
 FC:\Users\Kr1an_000\Desktop\FilmStorage\SObjectRepository\SObjectApplication\Views\Library.xaml;;
 FC:\Users\Kr1an_000\Desktop\FilmStorage\SObjectRepository\SObjectApplication\MainWindow.xaml;;
-FC:\Users\Kr1an_000\Desktop\FilmStorage\SObjectRepository\SObjectApplication\Views\LibraryList\AddConstellation\AddConstillation.xaml;;
-FC:\Users\Kr1an_000\Desktop\FilmStorage\SObjectRepository\SObjectApplication\Views\LibraryList\AddConstellation\AddPlanet.xaml;;
-FC:\Users\Kr1an_000\Desktop\FilmStorage\SObjectRepository\SObjectApplication\Views\LibraryList\AddConstellation\AddStar.xaml;;
-FC:\Users\Kr1an_000\Desktop\FilmStorage\SObjectRepository\SObjectApplication\Views\LibraryList\AddConstellation\Change\ChangeConstellation.xaml;;
-FC:\Users\Kr1an_000\Desktop\FilmStorage\SObjectRepository\SObjectApplication\Views\LibraryList\AddConstellation\Change\ChangePlanet.xaml;;
-FC:\Users\Kr1an_000\Desktop\FilmStorage\SObjectRepository\SObjectApplication\Views\LibraryList\AddConstellation\Change\ChangeStar.xaml;;
-FC:\Users\Kr1an_000\Desktop\FilmStorage\SObjectRepository\SObjectApplication\Views\LibraryList\ListConstellation.xaml;;
-FC:\Users\Kr1an_000\Desktop\FilmStorage\SObjectRepository\SObjectApplication\Views\LibraryList\ListPlanet.xaml;;
-FC:\Users\Kr1an_000\Desktop\FilmStorage\SObjectRepository\SObjectApplication\Views\LibraryList\ListStar.xaml;;
+FC:\Users\Kr1an_000\Desktop\FilmStorage\SObjectRepository\SObjectApplication\Views\LibraryList\AddConstellation\AddProducer.xaml;;
+FC:\Users\Kr1an_000\Desktop\FilmStorage\SObjectRepository\SObjectApplication\Views\LibraryList\AddConstellation\AddActor.xaml;;
+FC:\Users\Kr1an_000\Desktop\FilmStorage\SObjectRepository\SObjectApplication\Views\LibraryList\AddConstellation\AddFilm.xaml;;
+FC:\Users\Kr1an_000\Desktop\FilmStorage\SObjectRepository\SObjectApplication\Views\LibraryList\AddConstellation\Change\ChangeProducer.xaml;;
+FC:\Users\Kr1an_000\Desktop\FilmStorage\SObjectRepository\SObjectApplication\Views\LibraryList\AddConstellation\Change\ChangeActor.xaml;;
+FC:\Users\Kr1an_000\Desktop\FilmStorage\SObjectRepository\SObjectApplication\Views\LibraryList\AddConstellation\Change\ChangeFilm.xaml;;
+FC:\Users\Kr1an_000\Desktop\FilmStorage\SObjectRepository\SObjectApplication\Views\LibraryList\ListProducer.xaml;;
+FC:\Users\Kr1an_000\Desktop\FilmStorage\SObjectRepository\SObjectApplication\Views\LibraryList\ListActor.xaml;;
+FC:\Users\Kr1an_000\Desktop\FilmStorage\SObjectRepository\SObjectApplication\Views\LibraryList\ListFilm.xaml;;
 

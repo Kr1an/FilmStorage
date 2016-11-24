@@ -9,7 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using SObjectApplication.Views.LibraryList.AddConstellation;
+using SObjectApplication.Views.LibraryList.AddProducer;
 using System;
 using System.Diagnostics;
 using System.Windows;
@@ -32,7 +32,7 @@ using System.Windows.Shapes;
 using System.Windows.Shell;
 
 
-namespace SObjectApplication.Views.LibraryList.AddConstellation {
+namespace SObjectApplication.Views.LibraryList.AddProducer {
     
     
     /// <summary>

@@ -10,28 +10,38 @@ using SObjectRepository.Repository.SObjectModel;
 using System.IO;
 using SObjectApplication.Repository.SObjectModel;
 using SObjectApplication.Repository.SObjectModel.Utils;
+using System.IO.Compression;
+
 
 namespace SObjectApplication
 {
+	class Entities
+	{
+		public Chain<Producer> Prudocers;
+		public Chain<Film> Films;
+		public Chain<Actor> Actors;
+	}
 	class FilmStorage
 	{
 		static public Chain<Actor> Actors = new Chain<Actor>();
 		static public Chain<Film> Films = new Chain<Film>();
-		static public Chain<Producer> Producers = new Chain<Producer>();	
+		static public Chain<Producer> Producers = new Chain<Producer>();
+		
 		public static void AddRecords()
 		{
-			Chain<int> testChain = new Chain<int>();
-			List<int> testList = testChain.ToList();
-			testList.ToList().Add(12);
-			testList.ToList().Add(23);
-			((Chain<int>) testChain).Add(12);
+				
+			
+			FilmStorage.Actors.Add(new Actor() { Name = "Jack Nicholson", Info = new InfoHuman() { ExpHistory = "" } });
+			FilmStorage.Actors.Add(new Actor() { Name = "Ralph Fiennes", Info = new InfoHuman() { ExpHistory = "" } });
+			FilmStorage.Actors.Add(new Actor() { Name = "Daniel Lewis", Info = new InfoHuman() { ExpHistory = "" } });
+			FilmStorage.Actors.Add(new Actor() { Name = "Robert De Niro", Info = new InfoHuman() { ExpHistory = "" } });
+			FilmStorage.Actors.Add(new Actor() { Name = "Al Pacino", Info = new InfoHuman() { ExpHistory = "" } });
+			FilmStorage.Actors.Add(new Actor() { Name = "Dustin Hoffman", Info = new InfoHuman() { ExpHistory = "" } });
+			FilmStorage.Actors.Add(new Actor() { Name = "Tom Hanks", Info = new InfoHuman() { ExpHistory = "" } });
+			FilmStorage.Actors.Add(new Actor() { Name = "Brad Pitt", Info = new InfoHuman() { ExpHistory = "" } });
 
-			
-			
-			FilmStorage.Actors.Add(new Actor() { Name = "Actor1", Info = new InfoHuman() { ExpHistory = "ExpHistory of Actor1" } });
-			FilmStorage.Actors.Add(new Actor() { Name = "Actor2", Info = new InfoHuman() { ExpHistory = "ExpHistory of Actor2" } });
-			FilmStorage.Actors.Add(new Actor() { Name = "Actor3", Info = new InfoHuman() { ExpHistory = "ExpHistory of Actor3" } });
-			FilmStorage.Actors.Add(new Actor() { Name = "Actor4", Info = new InfoHuman() { ExpHistory = "ExpHistory of Actor4" } });
+
+
 
 			FilmStorage.Films.Add(new Film() { Info = new InfoFilm(), Name = "film1" });
 			FilmStorage.Films.Add(new Film() { Info = new InfoFilm(), Name = "film2" });
