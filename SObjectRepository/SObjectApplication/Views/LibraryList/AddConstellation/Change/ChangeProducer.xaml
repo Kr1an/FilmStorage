@@ -1,6 +1,7 @@
 ﻿<Window x:Class="SObjectApplication.Views.LibraryList.AddProducer.Change.ChangeProducer"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:res="clr-namespace:SObjectApplication.Properties"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SObjectApplication.Views.LibraryList.AddProducer.Change"
@@ -36,7 +37,6 @@
 				<Image x:Name="imgNext" Source="/SObjectApplication;component/resources/Drawable/refresh.png" MouseLeftButtonDown="imgNext_MouseLeftButtonDown"/>
 			</Border>
 			<Grid Grid.Column="1" HorizontalAlignment="Left" Height="71" Margin="0.6,0,0,0" VerticalAlignment="Top" Width="315" Grid.ColumnSpan="4"/>
-			<Label x:Name="label" Content="CONSTILL. CHANGE" Margin="10,10,81.72,10" Grid.ColumnSpan="4" Width="323" Height="51" FontSize="32" FontFamily="Tahoma" HorizontalAlignment="Center" VerticalAlignment="Center" Background="{x:Null}" Foreground="#FFB6B6B6" Grid.Column="1"/>
 
 		</Grid>
 		<Grid HorizontalAlignment="Left" Height="230" Margin="10,10,0,0" VerticalAlignment="Top" Width="498">
@@ -67,11 +67,11 @@
 							<ColumnDefinition Width="49*"/>
 							<ColumnDefinition Width="48*"/>
 						</Grid.ColumnDefinitions>
-						<Label x:Name="label_Copy2" Content="B. Year" FontFamily="Tahoma" FontSize="36" Foreground="#FF666666" Height="58" VerticalAlignment="Center" HorizontalAlignment="Center" Width="187" Margin="-39,56,10.4,-54" Grid.Column="0" Grid.ColumnSpan="4"/>
+						<Label x:Name="label_Copy2" Content="{x:Static res:Resources.Add_BirthYear}" FontFamily="Tahoma" FontSize="36" Foreground="#FF666666" Height="58" VerticalAlignment="Center" HorizontalAlignment="Center" Width="187" Margin="-81,55,52.4,-53" Grid.Column="0" Grid.ColumnSpan="4"/>
 						<Border CornerRadius="5" BorderBrush="White" BorderThickness="1" Grid.Column="2" HorizontalAlignment="Left" Height="59" VerticalAlignment="Top" Width="213" Background="#33C8C8C8" Margin="38.2,55,0,-54" Grid.ColumnSpan="5">
 							<TextBox  x:Name="year_text" Margin="-1,0,0.8,7.6" TextWrapping="Wrap" Text="" FontFamily="Tahoma" FontSize="32" BorderThickness="0"  Background="{x:Null}" Foreground="#FF666666" BorderBrush="#FF779BA8" TextAlignment="Center" Height="39" VerticalAlignment="Bottom"/>
 						</Border>
-						<Label x:Name="label_Copy1" Content="Name:" FontFamily="Tahoma" FontSize="36" Foreground="#FF666666" HorizontalAlignment="Right" Width="111" Margin="-15,0,9.6,0" Grid.Column="0" Height="58" VerticalAlignment="Top" Grid.ColumnSpan="3"/>
+						<Label x:Name="label_Copy1" Content="{x:Static res:Resources.Add_Name}" FontFamily="Tahoma" FontSize="36" Foreground="#FF666666" HorizontalAlignment="Right" Width="111" Margin="-15,0,9.6,0" Grid.Column="0" Height="58" VerticalAlignment="Top" Grid.ColumnSpan="3"/>
 					</Grid>
 
 

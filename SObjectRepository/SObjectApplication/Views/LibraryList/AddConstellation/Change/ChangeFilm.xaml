@@ -1,6 +1,7 @@
 ﻿<Window x:Class="SObjectApplication.Views.LibraryList.AddProducer.Change.ChangeFilm"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:res="clr-namespace:SObjectApplication.Properties"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SObjectApplication.Views.LibraryList.AddProducer.Change"
@@ -36,7 +37,6 @@
 				<Image x:Name="imgNext" Source="/SObjectApplication;component/resources/Drawable/refresh.png" MouseLeftButtonDown="imgNext_MouseLeftButtonDown"/>
 			</Border>
 			<Grid Grid.Column="1" HorizontalAlignment="Left" Height="71" Margin="0.6,0,0,0" VerticalAlignment="Top" Width="315" Grid.ColumnSpan="4"/>
-			<Label x:Name="label" Content="CHANGE FILM" Margin="55,10,93.4,10" Grid.ColumnSpan="4" Width="266" Height="51" FontSize="32" FontFamily="Tahoma" HorizontalAlignment="Center" VerticalAlignment="Center" Background="{x:Null}" Foreground="#FFB6B6B6" Grid.Column="1"/>
 
 		</Grid>
 		<Grid HorizontalAlignment="Left" Height="230" Margin="10,10,0,0" VerticalAlignment="Top" Width="498">
@@ -55,7 +55,7 @@
 					</Grid.RowDefinitions>
 
 					<Border CornerRadius="30" BorderBrush="White" BorderThickness="1" HorizontalAlignment="Left" Height="54" Margin="113.8,-7,0,0" VerticalAlignment="Top" Width="195" Background="#33C8C8C8" Grid.Column="1">
-						<TextBox  x:Name="text1" Margin="-161,0,160.2,4.4" TextWrapping="Wrap" Text="NAME" FontFamily="Tahoma" FontSize="32" BorderThickness="0"  Background="{x:Null}" Foreground="#FF666666" BorderBrush="#FF779BA8" TextAlignment="Center" Height="39" VerticalAlignment="Bottom"/>
+						<TextBox  x:Name="text1" Margin="-161,0,160.2,4.4" TextWrapping="Wrap" Text="{x:Static res:Resources.Name}" FontFamily="Tahoma" FontSize="32" BorderThickness="0"  Background="{x:Null}" Foreground="#FF666666" BorderBrush="#FF779BA8" TextAlignment="Center" Height="39" VerticalAlignment="Bottom"/>
 					</Border>
 
 					<TextBox  x:Name="name_text" Margin="145.8,0,0,17.8" TextWrapping="Wrap" Text="" FontFamily="Tahoma" FontSize="22" BorderThickness="0"  Background="{x:Null}" Foreground="Black" BorderBrush="#FF779BA8" TextAlignment="Center" Height="39" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="122" Grid.Column="1"/>
@@ -103,7 +103,7 @@
 													<Setter Property="Height" Value="30px"/>
 												</Style>
 											</GridView.ColumnHeaderContainerStyle>
-											<GridViewColumn Header="Producers" x:Name="colName"  Width="120px" DisplayMemberBinding="{Binding Name}"/>
+											<GridViewColumn Header="{x:Static res:Resources.Producer}" x:Name="colName"  Width="120px" DisplayMemberBinding="{Binding Name}"/>
 
 
 
@@ -127,9 +127,9 @@
 
 				</Grid>
 			</Border>
-			<TextBox  x:Name="const_text" Margin="169,0,223,120" TextWrapping="Wrap" Text="Prod Y." FontFamily="Tahoma" FontSize="25" BorderThickness="0"  Background="{x:Null}" Foreground="#FF666666" BorderBrush="#FF779BA8" TextAlignment="Center" Height="39" VerticalAlignment="Bottom"/>
-			<TextBox  x:Name="const_text_Copy" Margin="169,0,223,62" TextWrapping="Wrap" Text="Genre" FontFamily="Tahoma" FontSize="25" BorderThickness="0"  Background="{x:Null}" Foreground="#FF666666" BorderBrush="#FF779BA8" TextAlignment="Center" Height="39" VerticalAlignment="Bottom"/>
-			<TextBox  x:Name="const_text_Copy1" Margin="169,0,223,1" TextWrapping="Wrap" Text="Producer" FontFamily="Tahoma" FontSize="25" BorderThickness="0"  Background="{x:Null}" Foreground="#FF666666" BorderBrush="#FF779BA8" TextAlignment="Center" Height="39" VerticalAlignment="Bottom"/>
+			<TextBox  x:Name="const_text" Margin="169,0,223,120" TextWrapping="Wrap" Text="{x:Static res:Resources.Add_ProductionYear}" FontFamily="Tahoma" FontSize="25" BorderThickness="0"  Background="{x:Null}" Foreground="#FF666666" BorderBrush="#FF779BA8" TextAlignment="Center" Height="39" VerticalAlignment="Bottom"/>
+			<TextBox  x:Name="const_text_Copy" Margin="169,0,223,62" TextWrapping="Wrap" Text="{x:Static res:Resources.Genre}" FontFamily="Tahoma" FontSize="25" BorderThickness="0"  Background="{x:Null}" Foreground="#FF666666" BorderBrush="#FF779BA8" TextAlignment="Center" Height="39" VerticalAlignment="Bottom"/>
+			<TextBox  x:Name="const_text_Copy1" Margin="169,0,223,1" TextWrapping="Wrap" Text="{x:Static res:Resources.Producer}" FontFamily="Tahoma" FontSize="25" BorderThickness="0"  Background="{x:Null}" Foreground="#FF666666" BorderBrush="#FF779BA8" TextAlignment="Center" Height="39" VerticalAlignment="Bottom"/>
 		</Grid>
 		<Slider x:Name="c_slider" Margin="482,133,-21.6,0" Foreground="#FF0C0C0C" Background="{x:Null}" BorderBrush="Black" RenderTransformOrigin="0,0" Maximum="4" Value="3" Cursor="Arrow" Height="18" VerticalAlignment="Top" HorizontalAlignment="Left" Width="58" ValueChanged="c_slider_ValueChanged">
 			<Slider.RenderTransform>

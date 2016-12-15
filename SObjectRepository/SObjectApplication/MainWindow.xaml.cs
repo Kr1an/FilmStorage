@@ -26,17 +26,45 @@ namespace SObjectApplication
 	public partial class MainWindow : Window
 	{
 		public MainWindow rootElement;
+		public double RuOpacity=1;
+		public double EnOpacity;
 		public MainWindow()
 		{
-			FilmStorage.AddRecords();
+
+			//System.Threading.Thread.CurrentThread.CurrentUICulture = Properties.Settings.Default.Lang;
+			//LangChange();
+
+			FilmStorage.StorageRead();
+
+			
+			
 			rootElement = this;
 
+			this.DataContext = this;
 			InitializeComponent();
+			
 		}
 		public MainWindow(MainWindow rootElement)
 		{
 			this.rootElement = rootElement;
+			//DataContext = this;
+
+
+
 			InitializeComponent();
+			
+		}
+		public void LangChange()
+		{
+			if(System.Threading.Thread.CurrentThread.CurrentUICulture == System.Globalization.CultureInfo.GetCultureInfoByIetfLanguageTag("ru-RU"))
+			{
+				this.RuOpacity = 0.5;
+				this.EnOpacity = 0.3;
+			}else
+			{
+				this.RuOpacity = 0.3;
+				this.EnOpacity = 0.5;
+			}
 		}
 
 		private void btnLibrary_MouseUp(object sender, MouseButtonEventArgs e)
@@ -56,9 +84,23 @@ namespace SObjectApplication
 
 		private void btn_Exit_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
 		{
+			FilmStorage.StorageWrite();
+			Application.Current.MainWindow.Close();
 			
-			Application.Current.Shutdown();
-			
+		}
+
+		private void label1_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)//ru
+		{
+			System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfoByIetfLanguageTag("ru-RU");
+			Properties.Settings.Default.Lang = System.Threading.Thread.CurrentThread.CurrentUICulture;
+			LangChange();
+		}
+
+		private void label_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)//en
+		{
+			System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfoByIetfLanguageTag("en-US");
+			Properties.Settings.Default.Lang = System.Threading.Thread.CurrentThread.CurrentUICulture;
+			LangChange();
 		}
 	}
 }

@@ -40,12 +40,7 @@ namespace SObjectApplication.Views.LibraryList
 			listView.ItemsSource = FilmStorage.Films.items.Where(x => (x.Producer == this.ParentProducer || this.ParentProducer == null));
 			if(ParentProducer == null)
 			{
-				//buttonLayout.Effect = new System.Windows.Media.Effects.BlurEffect();
-				//btn_info.Effect = new System.Windows.Media.Effects.BlurEffect();
-				//btn_add.Effect = new System.Windows.Media.Effects.BlurEffect();
-				//btn_delete.Effect = new System.Windows.Media.Effects.BlurEffect();
-				//btn_delete.IsEnabled = false;
-				//btn_info.IsEnabled = false;
+				
 				btn_add.IsEnabled = false;
 				btn_add.Visibility = Visibility.Hidden;
 			}

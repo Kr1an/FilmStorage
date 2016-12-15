@@ -1,6 +1,7 @@
 ﻿<Window x:Class="SObjectApplication.Views.LibraryList.ListActor"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:res="clr-namespace:SObjectApplication.Properties"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SObjectApplication.Views.LibraryList"
@@ -59,9 +60,9 @@
 									<Setter Property="Height" Value="30px"/>
 								</Style>
 							</GridView.ColumnHeaderContainerStyle>
-							<GridViewColumn Header="Name" x:Name="colShortName"  Width="160px" DisplayMemberBinding="{Binding Name}"/>
-							<GridViewColumn Header="Last Films" x:Name="colPosition" Width="200 px" DisplayMemberBinding="{Binding Films.Sample}" />
-							<GridViewColumn Header="Year" x:Name="colName"  Width="120px" DisplayMemberBinding="{Binding Info.BirthDate.Year}"/>
+							<GridViewColumn Header="{x:Static res:Resources.Name}" x:Name="colShortName"  Width="160px" DisplayMemberBinding="{Binding Name}"/>
+							<GridViewColumn Header="{x:Static res:Resources.LastFilms}" x:Name="colPosition" Width="200 px" DisplayMemberBinding="{Binding Films.Sample}" />
+							<GridViewColumn Header="{x:Static res:Resources.Year}" x:Name="colName"  Width="120px" DisplayMemberBinding="{Binding Info.BirthDate.Year}"/>
 
 
 

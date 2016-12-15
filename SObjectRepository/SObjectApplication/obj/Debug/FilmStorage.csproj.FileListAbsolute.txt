@@ -31,3 +31,10 @@ C:\Users\Kr1an_000\Desktop\FilmStorage\SObjectRepository\SObjectApplication\obj\
 C:\Users\Kr1an_000\Desktop\FilmStorage\SObjectRepository\SObjectApplication\obj\Debug\SObjectApplication.Properties.Resources.resources
 C:\Users\Kr1an_000\Desktop\FilmStorage\SObjectRepository\SObjectApplication\obj\Debug\FilmStorage.csproj.GenerateResource.Cache
 C:\Users\Kr1an_000\Desktop\FilmStorage\SObjectRepository\SObjectApplication\bin\Debug\SObjectApplication.pdb
+C:\Users\Kr1an_000\Desktop\FilmStorage\SObjectRepository\SObjectApplication\obj\Debug\FilmStorage.csprojResolveAssemblyReference.cache
+C:\Users\Kr1an_000\Desktop\FilmStorage\SObjectRepository\SObjectApplication\bin\Debug\ru-RU\SObjectApplication.resources.dll
+C:\Users\Kr1an_000\Desktop\FilmStorage\SObjectRepository\SObjectApplication\bin\Debug\en-US\SObjectApplication.resources.dll
+C:\Users\Kr1an_000\Desktop\FilmStorage\SObjectRepository\SObjectApplication\obj\Debug\SObjectApplication.Properties.Resources.ru-RU.resources
+C:\Users\Kr1an_000\Desktop\FilmStorage\SObjectRepository\SObjectApplication\obj\Debug\SObjectApplication.Properties.Resources.en-US.resources
+C:\Users\Kr1an_000\Desktop\FilmStorage\SObjectRepository\SObjectApplication\obj\Debug\ru-RU\SObjectApplication.resources.dll
+C:\Users\Kr1an_000\Desktop\FilmStorage\SObjectRepository\SObjectApplication\obj\Debug\en-US\SObjectApplication.resources.dll

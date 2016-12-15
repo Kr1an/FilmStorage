@@ -166,6 +166,8 @@ namespace SObjectApplication.Views.LibraryList
 
 		private void btn_info_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
 		{
+			if (listView.SelectedIndex == -1)
+				return;
 			if(ParentFilm == null)
 			{
 				rootElement.Content = new ChangeActor(rootElement, (Actor)(listView.SelectedItem)).Content;

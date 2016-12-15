@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SObjectApplication"
+		xmlns:res="clr-namespace:SObjectApplication.Properties"
         mc:Ignorable="d"
         Title="Library" Height="350" Width="525">
 	<Grid Background="White">
@@ -74,7 +75,7 @@
 			</Border>
 			<TextBox x:Name="textBox" Grid.Column="1" HorizontalAlignment="Center" Height="51" Margin="10.4,20,9.8,10" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="295" FontFamily="Tahoma" FontSize="36" Foreground="#FF8B8B8B" SelectionBrush="{x:Null}" Background="{x:Null}" BorderBrush="{x:Null}" IsReadOnly="True" TextAlignment="Center" Visibility="Hidden"/>
 			<Border  CornerRadius="5" BorderBrush="#FFB7B7B7">
-				<Label x:Name="label" Content="LIBRARY" HorizontalAlignment="Left" Margin="188,13,-324.4,0" VerticalAlignment="Top" Height="49" Width="238" Grid.ColumnSpan="2" Foreground="#FF151515" Background="{x:Null}" Grid.Column="1" FontSize="32" FontFamily="Tahoma"/>
+				<Label x:Name="label" Content="{x:Static res:Resources.Library}" HorizontalAlignment="Left" Margin="188,13,-324.4,0" VerticalAlignment="Top" Height="49" Width="238" Grid.ColumnSpan="2" Foreground="#FF151515" Background="{x:Null}" Grid.Column="1" FontSize="32" FontFamily="Tahoma"/>
 			</Border>
 
 		</Grid>
